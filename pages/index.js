@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useSession, signOut, signIn, signUp } from 'next-auth/react';
 import Link from 'next/link';
+import Nav from '../components/nav';
 
 export default function Home() {
 
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
 
       <main>
+        <Nav />
         <h1>Hello {session?.user?.email || "Unknown"}</h1>
         {session?.user?.email ? (
           <button onClick={() => signOut()}>Sign Out</button>

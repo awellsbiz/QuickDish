@@ -1,0 +1,24 @@
+/* styles.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  .navbarLogo img {
+    height: 30px;
+  }
+  
+  .navbarLinks a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .navbarLinks a:hover {
+    color: #666;
+  }
+  
