@@ -1,0 +1,61 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carouselContainer {
+    display: flex;
+    transition: transform 2s ease;
+  }
+  
+  .carouselSlide {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .carouselItem {
+    flex: 0 0 100%;
+    padding: 20px;
+    text-align: center;
+}
+  
+  .carouselItem h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .carouselItem p {
+    font-size: 16px;
+    color: #555;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  .carouselPrev,
+  .carouselNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .carouselPrev {
+    left: 10px;
+  }
+  
+  .carouselNext {
+    right: 10px;
+  }
+  

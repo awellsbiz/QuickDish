@@ -3,8 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/Nav.module.css';
+import { useSession, signOut, signIn, signUp } from 'next-auth/react';
 
 const Nav = () => {
+    const { data: session } = useSession()
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarLogo}>
@@ -14,17 +16,25 @@ const Nav = () => {
           </a>
         </Link>
       </div>
+      {session?.user?.email ? (
+        <div className={styles.navbarLinks}>
+        <Link href="/recipes">
+          <a>Recipes</a>
+        </Link>
+        <Link href="/login">
+        <a onClick={() => signOut()}>Sign Out</a>
+        </Link>
+      </div>
+        ) : (
       <div className={styles.navbarLinks}>
         <Link href="/recipes">
           <a>Recipes</a>
         </Link>
         <Link href="/login">
-          <a>Login</a>
-        </Link>
-        <Link href="/signup">
-          <a>Sign Up</a>
+         <a onClick={() => signIn()}>Sign In | Register</a>
         </Link>
       </div>
+        )}
     </nav>
   );
 };

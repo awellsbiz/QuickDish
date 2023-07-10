@@ -11,3 +11,25 @@
   justify-content: center;
   align-items: center;
 }
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  border: solid 5px #ccc;
+  width: fit-content; 
+  margin: 0 auto;
+}
+
+.recipeContainer  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 85%;
+  height: 100vh;
+  margin: 0 auto;
+  border: solid 5px purple;
+}
